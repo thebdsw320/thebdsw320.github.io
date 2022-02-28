@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Quiz Leyes de los Exponentes - Estadística</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a id=leaderboard-link>Ver Marcadores <i class="fas fa-hand-point-left fa-lg"></i>
+        </i></a> 
+        
+        <time>Tiempo: <span id="time"></span></time>
+    </header>
+
+    <main>
+        <div id=start-card class="card">
+            <h2 id=title>Quiz - Leyes de los Exponentes</h2>
+            <p>Trata de encontrar las respuestas a las preguntas antes de que el contador llegue al tiempo límite  <br><br> Las respuestas incorrectas penalizarán el tiempo que te quede </p>
+            <button id=start-button class="button">Comenzar Quiz</button>
+        </div>
+
+        <div hidden id=question-card class="card">
+
+            <h2 id=question-text></h2>
+
+            <div id=quiz-options>
+                <button id=option0 class="button option-button"></button>
+                <button id=option1 class="button option-button"></button>
+                <button id=option2 class="button option-button"></button>
+                <button id=option3 class="button option-button"></button>
+            </div>
+
+            <div id=result-div>
+                <hr>
+                <p id=result-text></p>
+            </div>
+
+        </div>
+
+        <div hidden id=score-card class="card">
+            <h2>Bien hecho!</h2>
+            <p>Tu puntuación final es: <span id=score></span>.</p>
+            <form class="inline-form" id="submission-form">
+                  <label for="initials">Tus iniciales: </label>
+                  <input type="text" id="initials">
+                  <button id="submit-button" class="button">Terminar</button>
+            </form>
+        </div>
+
+        <div hidden id=leaderboard-card class="card">
+            <h2>Marcadores</h2>
+            <ol id="highscore-list">
+            </ol>
+            <div class="inline-buttons">
+                <button id="back-button" class="button">Regresar</button>
+                <button id="clear-button" class="button">Limpiar Marcador</button>
+            </div>
+        </div>
+
+    </main>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
