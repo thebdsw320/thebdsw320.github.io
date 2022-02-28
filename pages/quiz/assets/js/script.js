@@ -1,42 +1,104 @@
 //store question text, options and answers in an array
 const questions = [
   {
-    questionText: "Commonly used data types DO NOT include:",
-    options: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
-    answer: "3. alerts",
-  },
-  {
-    questionText: "Arrays in JavaScript can be used to store ______.",
+    questionText: "Calcular... 2³ * 2⁵ = ___",
     options: [
-      "1. numbers and strings",
-      "2. other arrays",
-      "3. booleans",
-      "4. all of the above",
-    ],
-    answer: "4. all of the above",
+              "1. 2¹⁵", 
+              "2. 2²", 
+              "3. 2⁸", 
+              "4. 2⁷"
+            ],
+    answer: "3. 2⁸",
   },
   {
-    questionText:
-      "String values must be enclosed within _____ when being assigned to variables.",
-    options: ["1. commas", "2. curly brackets", "3. quotes", "4. parentheses"],
-    answer: "3. quotes",
-  },
-  {
-    questionText:
-      "A very useful tool used during development and debugging for printing content to the debugger is:",
+    questionText: "Calcular... x⁹ * x³ = ___",
     options: [
-      "1. JavaScript",
-      "2. terminal/bash",
-      "3. for loops",
-      "4. console.log",
+      "1. x⁶",
+      "2. x²",
+      "3. x²⁷",
+      "4. x¹²",
     ],
-    answer: "4. console.log",
+    answer: "4. x¹²",
   },
   {
-    questionText:
-      "Which of the following is a statement that can be used to terminate a loop, switch or label statement?",
-    options: ["1. break", "2. stop", "3. halt", "4. exit"],
-    answer: "1. break",
+    questionText: "Calcular... x¹⁵ / x⁴ = ___",
+    options: [
+              "1. x¹⁹", 
+              "2. x⁵", 
+              "3. x⁹", 
+              "4. x¹¹"
+            ],
+    answer: "4. x¹¹",
+  },
+  {
+    questionText: "Calcular... (3⁴ * 2⁶ * 7⁵) / (2⁵ * 3⁴ * 7²) = ___",
+    options: [
+      "1. 3 * 7²",
+      "2. 2 * 3⁷",
+      "3. 2 * 7³",
+      "4. 3 * 7³",
+    ],
+    answer: "3. 2 * 7³",
+  },
+  {
+    questionText: "Calcular... (9⁵)³ = ___",
+    options: [
+              "1. 9¹⁵", 
+              "2. 9²", 
+              "3. 9⁸", 
+              "4. 3²"
+            ],
+    answer: "1. 9¹⁵",
+  },
+  {
+    questionText: "Calcular... (9⁵ / 5⁶)² = ___",
+    options: [
+              "1. 9¹¹ / 9²", 
+              "2. 9²⁰", 
+              "3. 9¹⁰ / 5¹²", 
+              "4. 9¹⁰ / 9¹²"
+            ],
+    answer: "4. 9¹⁰ / 9¹²",
+  },
+  {
+    questionText: "Calcular... 2⁻¹ * 7⁻³ = ___",
+    options: [
+              "1. 1 / 2 * 7³", 
+              "2. 2 * 7³", 
+              "3. 2¹ * 7³", 
+              "4. 9⁻⁴"
+            ],
+    answer: "1. 1 / 2 * 7³",
+  },
+  {
+    questionText: "Calcular... (3 / 2)⁻⁵ = ___",
+    options: [
+              "1. 2³ * 3⁵", 
+              "2. (3 / 2)³", 
+              "3. (2 / 3)⁵", 
+              "4. (5 / 3)⁵"
+            ],
+    answer: "3. (2 / 3)⁵",
+  },
+  {
+    questionText: "Calcular... (5 * 7)² = ___",
+    options: [
+              "1. 35²", 
+              "2. 5² * 7²", 
+              "3. 2³⁵", 
+              "4. 7¹² * 5²"
+            ],
+    answer: "2. 5² * 7²",
+  },
+  {
+    questionText: "Calcular...  (x + x)⁰ = ___",
+    options: [
+              "1. 2x", 
+              "2. x²", 
+              "3. 4x²", 
+              "4. 1"
+            ],
+    answer: "4. 1",
   },
 ];
 
@@ -79,7 +141,7 @@ function startQuiz() {
   displayQuestion();
 
   //set total time depending on number of questions
-  time = questions.length * 30;
+  time = questions.length * 15;
 
   //executes function "countdown" every 1000ms to update time and display on page
   intervalID = setInterval(countdown, 1000);
@@ -137,8 +199,8 @@ function checkAnswer(eventObject) {
   } else {
     resultText.textContent = "Incorrecto!";
     setTimeout(hideResultText, 1000);
-    if (time >= 10) {
-      time = time - 10;
+    if (time >= 15) {
+      time = time - 15;
       displayTime();
     } else {
       //if time is less than 10, display time as 0 and end quiz
