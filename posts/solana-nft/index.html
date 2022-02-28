@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Instrucciones para mintear un NFT en Solana Pt. 1 - The Boring Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://thebdsw320.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.4b2bfb3701049fe0da3e8d6b9d15186ba1dc7e294f0be3e2bca21bb8a330f5dd.css">
+  
+
+  
+    <meta name="description" content="Veremos cómo desplegar NFTs en Solana y crear una página para mintearlos haciendo uso de Metaplex y Candy Machine."/>
+    <meta property="og:title" content="Instrucciones para mintear un NFT en Solana Pt. 1"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://thebdsw320.github.io/posts/solana-nft/"/>
+    <meta property="og:image" content="http://thebdsw320.github.io/images/cctv.jpegz"/>
+    <meta property="og:description" content="Veremos cómo desplegar NFTs en Solana y crear una página para mintearlos haciendo uso de Metaplex y Candy Machine."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@zerostaticio"/>
+    <meta name="twitter:creator" content="@zerostaticio"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="http://thebdsw320.github.io/">The Boring Blog</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-about">
+                <a href="/pages/about/">About</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="/posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Instrucciones para mintear un NFT en Solana Pt. 1<span class="dot">.</span></h1>
+      
+      <img src="/images/cctv.jpegz" />
+      
+    </div>
+    <div class="content">
+      <h1 id="instrucciones-para-mintear-un-nft-en-solana-pt1">Instrucciones para mintear un NFT en Solana Pt.1</h1>
+<h2 id="qué-es-un-nft">¿Qué es un NFT?</h2>
+<p>Un NFT es un <strong>Non Fungible Token</strong> que traducido queda más o menos como un <strong>Token No Fungible</strong>. ¿A qué se refiere esto? Bueno&hellip; Un token lo podemos pensar como unas <em>fichitas</em> o <em>créditos</em> que te pueden dar en algún lugar para intercambiarlos por un servicio, un producto o un juego; ¿dónde hemos interactuado con <strong>tokens</strong>? El ejemplo más claro es en un casino, no puedes apostar dinero real (pesos o doláres), lo que pasa ahí es que te cambian tu dinero real por <em>fichitas</em> que solamente tienen un valor dentro del casino y que puedes intercambiar o gastar en ese mismo lugar.</p>
+<p>Y que algo sea <strong>fungible</strong> es básicamente que pueda ser intercambiable e indestinguible. La moneda por ejemplo, es algo fungible ya que la puedes intercambiar <em>por algo del mismo valor</em> y es complicado diferenciar una moneda de otra o un billete de otro porque no tienen algún rasgo de diferenciación.</p>
+<p>Entonces&hellip; una vez que vimos qué es un token fungible, surge la pregunta ¿qué es un token no fungible? Y es nada más y nada menos que un bien que existe en un espacio (una blockchain) que no puede ser intercambiable fácilmente y además tiene un rasgo o rasgos de diferenciación con otros tokens o bienes.</p>
+<h2 id="qué-haremos">¿Qué haremos?</h2>
+<p>En este primer post te llevaré paso a paso para que tú desarrolladora, desarrollador o entusiasta del ecosistema Blockchain puedas crear tus NFTs en la Blockchain de <strong>Solana</strong> ya sea en <em>Mainnet o Devnet</em>.</p>
+<p>El autor de este post obviará que todos los lectores saben qué es Blockchain y qué es Solana, por lo tanto, solamente daré una breve explicación acerca de qué es <em>Mainnet</em> y <em>Devnet</em>.</p>
+<p>Solana cuenta con diferentes <strong>clusters</strong> y cada uno de ellos tiene un propósito distinto.</p>
+<p><strong>Devnet</strong></p>
+<ul>
+<li>Devnet sirve como un lugar donde puedes experimentar, en palabras de la documentación de solana es un <em>playground</em> para cualquier persona que quiera probar Solana como usuario, desarrollador o validador.</li>
+</ul>
+<p><strong>Mainnet Beta</strong></p>
+<ul>
+<li>Los tokens que se emiten y que usan en Mainnet Beta es <em>SOL</em> real.</li>
+<li>No se recomienda usar este cluster para hacer <em>testing</em> o en la fase de desarrollo de alguna aplicación.</li>
+</ul>
+<p><strong>Diferencias</strong></p>
+<ul>
+<li>Los tokens en Devnet no son reales</li>
+<li>Devnet incluye un <em>grifo</em> de tokens para las pruebas de aplicaciones.</li>
+<li>Devnet puede estar sujeto a reinicios del libro mayor.</li>
+<li>Devnet usualmente corre software más nuevo del que corre en Mainnet Beta.</li>
+</ul>
+<p>Entonces, para poder hacer esto optaré por usar Devnet para que no sea necesario poseer <em>SOL</em> y cualquier persona pueda realizar estas pruebas sin costo.</p>
+<h2 id="instrucciones">Instrucciones</h2>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/zerostaticio" title="twitter" target="_blank" rel="noopener">
+          <img src="/images/social/twitter.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/zerostaticthemes" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-linkedin">
+        <a href="https://www.linkedin.com" title="linkedin" target="_blank" rel="noopener">
+          <img src="/images/social/linkedin.svg" width="24" height="24" alt="linkedin"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>
